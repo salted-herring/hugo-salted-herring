@@ -1,0 +1,47 @@
+---
+label: Work
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: masthead
+  label: Masthead
+- type: text
+  label: Title
+  name: title
+  config:
+    required: true
+- type: file
+  name: header_image_video
+  label: header image/video
+- type: tag_list
+  name: services
+  label: Services
+- type: color
+  name: background_colour
+  config:
+    color_format: Hex
+    required: true
+  label: Background Colour
+  default: "#FFFFFF"
+- type: blocks
+- type: field_group
+  label: Awards
+  name: awards
+  fields:
+  - type: text
+    label: URL Label
+    name: url_label
+    config:
+      required: false
+    description: Title of link to award
+  - type: text
+    name: url
+    label: URL
+    description: URL linking to award
+  - type: text
+    name: awards_programme
+    label: Awards Programme
+    description: e.g. Best Awards
+    config:
+      required: true
