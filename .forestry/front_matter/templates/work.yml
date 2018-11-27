@@ -24,21 +24,17 @@ fields:
     required: true
   label: Background Colour
   default: "#FFFFFF"
-- type: blocks
-- type: field_group
-  label: Awards
+- type: field_group_list
   name: awards
+  label: Awards
   fields:
+  - type: include
   - type: text
-    label: URL Label
     name: url_label
-    config:
-      required: false
-    description: Title of link to award
+    label: URL Label
   - type: text
     name: url
     label: URL
-    description: URL linking to award
   - type: text
     name: awards_programme
     label: Awards Programme
