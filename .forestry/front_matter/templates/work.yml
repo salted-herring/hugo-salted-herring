@@ -41,5 +41,12 @@ fields:
     description: e.g. Best Awards
     config:
       required: true
+- type: textarea
+  name: description
+  label: Description
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
 pages:
 - content/kōkako.md
