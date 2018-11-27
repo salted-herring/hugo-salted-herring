@@ -5,6 +5,14 @@ admin_path: admin
 webhook_url: 
 sections:
 - type: directory
+  path: work
+  label: Work
+  create: documents
+  match: "*"
+  new_doc_ext: ".html"
+  templates:
+  - work
+- type: directory
   path: content
   label: Pages
   create: all
