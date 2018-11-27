@@ -51,5 +51,7 @@ fields:
 - type: blocks
   name: content_blocks
   label: Content Blocks
+  template_types:
+  - content-block
 pages:
 - content/kōkako.md
