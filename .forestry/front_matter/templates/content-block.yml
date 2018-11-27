@@ -1,0 +1,25 @@
+---
+label: Content Block
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: select
+  name: alignment
+  config:
+    source:
+      type: simple
+    options:
+    - left
+    - right
+  label: Alignment
+- type: textarea
+  name: text
+  label: Text
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
