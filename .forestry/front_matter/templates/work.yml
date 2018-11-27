@@ -48,5 +48,8 @@ fields:
     wysiwyg: true
     schema:
       format: html-blocks
+- type: blocks
+  name: content_blocks
+  label: Content Blocks
 pages:
 - content/kōkako.md
