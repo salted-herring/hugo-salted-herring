@@ -1,0 +1,38 @@
+{{ define "title"}} {{ .Site.Title}} | {{.Title}} {{end}}
+{{ define "header"}} {{ partial "menu" .}} {{end}}
+
+{{ define "main" }}
+<main aria-role="main">
+
+    <header class="homepage-header">
+        {{ .Params.introduction | safeHTML }}
+    </header>
+
+    <section class="section">
+        {{ if isset .Params "latest_content_label" }}
+        <header>
+            <h2>{{.Params.latest_content_label}}</h2>
+        </header>
+        {{ end }}
+
+        {{ if isset .Params "latest_content" }}
+        <div class="latest-content">
+            {{ range .Params.latest_content }}
+            {{ with . }}
+            {{ if .image}}
+            <img src="{{ .image }}" />
+            {{ end }}
+            {{ if .description }}
+            <p>{{ .description }}</p>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+
+    <div class="background-text">{{.Params.background_text}}</div>
+</main>
+{{ end }}
+
+{{ define "footer" }} {{ partial "footer" .}} {{ end }}
