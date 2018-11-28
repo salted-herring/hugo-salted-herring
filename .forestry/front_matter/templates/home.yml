@@ -1,8 +1,15 @@
 ---
 label: Home
-hide_body: false
+hide_body: true
 is_partial: false
 fields:
+- type: textarea
+  name: introduction
+  label: Introduction
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
 - type: text
   label: Background Text
   name: background_text
