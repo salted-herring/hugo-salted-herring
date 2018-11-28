@@ -1,3 +1,5 @@
 languageCode = "en-nz"
 theme = "bulma"
 title = "Salted Herring"
+verboseLog = true
+menu = [ "main", "footer" ]
