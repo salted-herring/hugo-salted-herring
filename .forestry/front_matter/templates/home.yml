@@ -1,0 +1,9 @@
+---
+label: Home
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Background Text
+  name: background_text
+  description: Text that shows up in the background of the page.
