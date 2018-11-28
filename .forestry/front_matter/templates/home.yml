@@ -7,3 +7,13 @@ fields:
   label: Background Text
   name: background_text
   description: Text that shows up in the background of the page.
+- type: text
+  name: latest_content_label
+  label: Latest Content Label
+  description: e.g. "Latest"
+- type: blocks
+  template_types:
+  - content-tile
+  label: Latest content
+  name: latest_content
+  description: Tiles of latest content
