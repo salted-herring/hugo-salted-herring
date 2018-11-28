@@ -4,6 +4,14 @@ theme = "bulma"
 title = "Salted Herring"
 verboseLog = true
 [[menu.main]]
-name = "Kōkako"
-url = "/kokako"
+name = "people"
+url = "/people"
+weight = 3
+[[menu.main]]
+name = "work"
+url = "/work"
+weight = 2
+[[menu.main]]
+name = "about"
+url = "/about"
 weight = 1
