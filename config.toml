@@ -1,5 +1,9 @@
+SectionPagesMenu = "main"
 languageCode = "en-nz"
 theme = "bulma"
 title = "Salted Herring"
 verboseLog = true
-SectionPagesMenu = "main" # Enable menu system for lazy bloggers
+[[menu.main]]
+name = "Kōkako"
+url = "/kokako"
+weight = 1
