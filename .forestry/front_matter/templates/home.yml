@@ -25,4 +25,4 @@ fields:
   name: latest_content
   description: Tiles of latest content
 pages:
-- content/home.html
+- content/_index.html
