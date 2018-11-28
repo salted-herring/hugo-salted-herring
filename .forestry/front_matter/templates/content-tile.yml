@@ -1,0 +1,30 @@
+---
+label: Content Tile
+hide_body: false
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Used to describe this block (not necessarily shown on front end)
+  config:
+    required: true
+- type: file
+  name: image
+  label: Image
+  description: Image tile
+- type: textarea
+  name: description
+  label: Description
+  description: A short text description
+- type: select
+  config:
+    source:
+      type: pages
+  label: Link
+  name: link
+  description: URL to link this content to
+- type: text
+  name: link_label
+  label: Link label
