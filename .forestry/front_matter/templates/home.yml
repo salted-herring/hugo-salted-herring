@@ -17,3 +17,5 @@ fields:
   label: Latest content
   name: latest_content
   description: Tiles of latest content
+pages:
+- content/home.html
