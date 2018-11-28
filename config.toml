@@ -2,4 +2,4 @@ baseURL = "htts://www.saltedherring.design/"
 languageCode = "en-nz"
 title = "Salted Herring"
 theme = "bulma"
-menu = ["main", "footer"]
+menu = "main", "footer"
