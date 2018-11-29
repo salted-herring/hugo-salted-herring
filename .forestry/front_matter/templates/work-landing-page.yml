@@ -4,7 +4,15 @@ hide_body: true
 is_partial: false
 fields:
 - type: text
+  name: masthead
+  label: Masthead
+- type: text
   label: Background Text
   name: background_text
   config:
     required: true
+- type: color
+  name: background_colour
+  config:
+    color_format: Hex
+  label: Background COlour
