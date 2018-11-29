@@ -8,7 +8,7 @@ fields:
   name: awards_section_title
   label: Awards Section Title
   config:
-    required: true
+    required: false
 - type: color
   name: awards_section_background_colour
   config:
