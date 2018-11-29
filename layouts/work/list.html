@@ -1,0 +1,33 @@
+{{ define "title"}}
+    {{ .Site.Title }}
+    |
+    {{.Title}}
+{{end}}
+{{ define "header"}}
+    {{ partial "menu" . }}
+{{end}}
+
+{{ define "main" }}
+    <main aria-role="main">
+        <section class="work section" style="background-color: {{ .Params.background_colour }}">
+            <header>
+                <span class="masthead">{{ .Params.masthead }}</span>
+                <h1>{{ .Params.background_text }}</h1>
+            </header>
+            {{ if .Pages }}
+                <div class="pages">
+                {{ end }}
+                {{ range .Pages }}
+                    {{ .Render "summary"}}
+                {{ end }}
+                {{ if .Pages }}
+                </div>
+            {{ end }}
+        </section>
+
+    </main>
+{{ end }}
+
+{{ define "footer" }}
+    {{ partial "footer" .}}
+{{ end }}
