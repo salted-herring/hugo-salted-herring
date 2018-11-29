@@ -9,6 +9,9 @@ fields:
   label: Awards Section Title
   config:
     required: true
+- type: file
+  name: award_logo
+  label: Award Logo
 - type: field_group_list
   fields:
   - type: text
