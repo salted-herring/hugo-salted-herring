@@ -16,6 +16,16 @@ fields:
   config:
     color_format: Hex
   label: Background COlour
+- type: color
+  name: awards_background_colour
+  config:
+    color_format: Hex
+  label: Awards Background Colour
+- type: color
+  config:
+    color_format: Hex
+  label: Clients Background Colour
+  name: clients_background_colour
 - type: field_group
   label: Awards
   name: awards
@@ -25,11 +35,6 @@ fields:
     label: Title
     config:
       required: false
-  - type: color
-    name: background_colour
-    config:
-      color_format: Hex
-    label: Background Colour
   - type: field_group_list
     label: Award List
     name: award_list
