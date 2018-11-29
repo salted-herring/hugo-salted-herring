@@ -15,16 +15,31 @@
         </header>
         {{ end }}
 
+
+
         {{ if isset .Params "latest_content" }}
         <div class="latest-content">
             {{ range .Params.latest_content }}
+            {{ $url := string .link }}
+
             {{ with . }}
-            {{ if .image}}
-            <img src="{{ .image }}" />
+            {{ if .link }}
+            {{ with $.Site.GetPage .link }}
+            <a href="{{.Permalink}}">
+                {{ end }}
+                {{ end }}
+
+                {{ if .image}}
+                <img src="{{ .image }}" />
+                {{ end }}
+                {{ if .description }}
+                <p>{{ .description }}</p>
+                {{ end }}
+
+                {{ if .link }}
+            </a>
             {{ end }}
-            {{ if .description }}
-            <p>{{ .description }}</p>
-            {{ end }}
+
             {{ end }}
             {{ end }}
         </div>
