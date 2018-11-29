@@ -16,3 +16,47 @@ fields:
   config:
     color_format: Hex
   label: Background COlour
+- type: field_group
+  label: Awards
+  name: awards
+  fields:
+  - type: text
+    name: title
+    label: Title
+    config:
+      required: false
+  - type: color
+    name: background_colour
+    config:
+      color_format: Hex
+    label: Background Colour
+  - type: field_group_list
+    label: Award List
+    name: award_list
+    fields:
+    - type: file
+      label: Award Logo
+      name: award_logo
+    - type: text
+      name: title
+      label: Title
+    - type: field_group_list
+      name: entries
+      label: Entries
+      fields:
+      - type: text
+        name: year
+        label: Year
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        config:
+          wysiwyg: true
+          schema:
+            format: markdown
+      config:
+        labelField: year
+    config:
+      labelField: title
