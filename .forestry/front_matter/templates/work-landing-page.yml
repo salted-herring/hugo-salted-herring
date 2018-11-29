@@ -16,12 +16,11 @@ fields:
   config:
     color_format: Hex
   label: Background COlour
-- type: color
-  config:
-    color_format: Hex
-  label: Clients Background Colour
-  name: clients_background_colour
 - type: include
   template: awards
   label: Awards Section
   name: awards_section
+- type: include
+  name: clients_section
+  label: Clients Section
+  template: image-list
