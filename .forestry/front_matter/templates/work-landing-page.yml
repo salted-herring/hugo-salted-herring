@@ -1,0 +1,10 @@
+---
+label: Work Landing Page
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Background Text
+  name: background_text
+  config:
+    required: true
