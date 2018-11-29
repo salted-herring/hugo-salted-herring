@@ -1,0 +1,17 @@
+---
+label: Image List
+hide_body: false
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+- type: color
+  config:
+    color_format: Hex
+  label: Background Colour
+  name: background_colour
+- type: image_gallery
+  name: client_logos
+  label: Client Logos
