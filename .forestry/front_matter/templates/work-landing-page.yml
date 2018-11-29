@@ -16,10 +16,16 @@ fields:
   config:
     color_format: Hex
   label: Background COlour
+- type: boolean
+  name: show_awards_section
+  label: Show Awards Section
 - type: include
   template: awards
   label: Awards Section
   name: awards_section
+- type: boolean
+  name: show_clients_section
+  label: Show Clients Section
 - type: include
   name: clients_section
   label: Clients Section
