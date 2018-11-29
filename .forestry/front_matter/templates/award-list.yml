@@ -5,13 +5,10 @@ is_partial: true
 display_field: title
 fields:
 - type: text
-  name: title
-  label: Title
+  name: awards_section_title
+  label: Awards Section Title
   config:
     required: true
-- type: file
-  name: award_logo
-  label: Award Logo
 - type: field_group_list
   fields:
   - type: number
