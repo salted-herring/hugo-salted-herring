@@ -2,7 +2,7 @@
 label: Award List
 hide_body: true
 is_partial: true
-display_field: title
+display_field: awards_section_title
 fields:
 - type: text
   name: awards_section_title
@@ -11,11 +11,9 @@ fields:
     required: true
 - type: field_group_list
   fields:
-  - type: number
-    name: year
+  - type: text
     label: Year
-    config:
-      required: true
+    name: year
   - type: textarea
     config:
       wysiwyg: true
@@ -26,4 +24,4 @@ fields:
   label: Award entries
   name: award_entries
   config:
-    labelField: description
+    labelField: year
