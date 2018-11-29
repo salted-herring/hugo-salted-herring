@@ -13,5 +13,5 @@ fields:
   label: Background Colour
   name: background_colour
 - type: image_gallery
-  name: client_logos
-  label: Client Logos
+  name: images
+  label: Images
