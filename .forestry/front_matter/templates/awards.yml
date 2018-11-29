@@ -14,3 +14,8 @@ fields:
   config:
     color_format: Hex
   label: Background Colour
+- type: blocks
+  template_types:
+  - award-list
+  label: Award Entries
+  name: award_entries
