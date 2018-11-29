@@ -20,6 +20,7 @@ sections:
   match: "*"
   new_doc_ext: html
   templates:
+  - work-landing-page
   - work
 upload_dir: static/uploads
 public_path: "/uploads"
