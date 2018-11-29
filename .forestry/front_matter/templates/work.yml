@@ -53,3 +53,5 @@ fields:
   label: Content Blocks
   template_types:
   - content-block
+pages:
+- work/kokako.html
