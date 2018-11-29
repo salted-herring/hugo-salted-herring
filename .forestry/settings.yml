@@ -14,7 +14,7 @@ sections:
   - content-block
   - home
 - type: directory
-  path: work
+  path: content/work
   label: Work
   create: documents
   match: "*"
