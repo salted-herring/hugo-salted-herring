@@ -14,6 +14,12 @@ fields:
   label: Background Text
   name: background_text
   description: Text that shows up in the background of the page.
+- type: color
+  name: background_text_colour_picker
+  config:
+    color_format: Hex
+  label: Background text colour picker
+  description: Text colour for the latest content
 - type: text
   name: latest_content_label
   label: Latest Content Label
@@ -24,11 +30,5 @@ fields:
   label: Latest content
   name: latest_content
   description: Tiles of latest content
-- type: color
-  name: latest_content_colour_picker
-  config:
-    color_format: Hex
-  label: Latest content colour picker
-  description: Text colour for the latest content
 pages:
 - content/_index.html
