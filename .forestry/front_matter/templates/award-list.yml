@@ -1,0 +1,32 @@
+---
+label: Award List
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: file
+  name: award_logo
+  label: Award Logo
+- type: field_group_list
+  fields:
+  - type: number
+    name: year
+    label: Year
+    config:
+      required: true
+  - type: textarea
+    config:
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Description
+    name: description
+  label: Award entries
+  name: award_entries
+  config:
+    labelField: description
