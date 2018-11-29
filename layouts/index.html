@@ -46,7 +46,12 @@
         {{ end }}
     </section>
 
+    {{ if .Params.background_text_colour_picker }}
+    <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">{{.Params.background_text}}</div>
+    {{ else }}
     <div class="background-text">{{.Params.background_text}}</div>
+    {{ end }}
+
 </main>
 {{ end }}
 
