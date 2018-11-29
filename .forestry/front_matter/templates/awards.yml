@@ -2,18 +2,18 @@
 label: Awards
 hide_body: false
 is_partial: true
-display_field: title
+display_field: awards_section_title
 fields:
 - type: text
-  name: title
-  label: Title
+  name: awards_section_title
+  label: Awards Section Title
   config:
     required: true
 - type: color
-  name: background_colour
+  name: awards_section_background_colour
   config:
     color_format: Hex
-  label: Background Colour
+  label: Awards Section Background Colour
 - type: blocks
   template_types:
   - award-list
