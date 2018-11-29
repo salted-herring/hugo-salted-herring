@@ -9,6 +9,10 @@ sections:
   label: Pages
   create: all
   match: "*"
+  templates:
+  - content-tile
+  - content-block
+  - home
 - type: directory
   path: work
   label: Work
