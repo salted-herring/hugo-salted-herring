@@ -21,6 +21,10 @@
                 </header>
             {{ end }}
 
+            {{ with $.Resources.ByType "image" }}
+                xxx<br>
+            {{ end }}
+
             {{ if isset .Params "latest_content" }}
                 <div class="latest-content">
                     {{ range .Params.latest_content }}
