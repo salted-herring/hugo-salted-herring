@@ -1,5 +1,7 @@
 {{ define "title"}}
-    {{ .Site.Title }} | {{.Title}}
+    {{ .Site.Title }}
+    |
+    {{.Title}}
 {{end}}
 {{ define "header"}}
     {{ partial "menu" . }}
@@ -28,21 +30,19 @@
                             {{ if .link }}
                                 {{ with $.Site.GetPage .link }}
                                     <a href="{{.Permalink}}">
+                                    {{ end }}
                                 {{ end }}
-                            {{ end }}
 
-                            {{ if .image}}
-                                <img src="{{ .image }}"/>
-                            {{ end }}
-                            {{ if .description }}
-                                <p>{{ .description }}</p>
-                            {{ end }}
-
-                            {{ if .link }}
-                                {{ if .link_label}}
-                                    <b>{{ .link_label }}</b>
+                                {{ if .image}}{{ end }}
+                                {{ if .description }}
+                                    <p>{{ .description }}</p>
                                 {{ end }}
-                            </a>
+
+                                {{ if .link }}
+                                    {{ if .link_label}}
+                                        <b>{{ .link_label }}</b>
+                                    {{ end }}
+                                </a>
                             {{ end }}
                         {{ end }}
                     {{ end }}
