@@ -22,7 +22,7 @@ sections:
   templates:
   - work-landing-page
   - work
-upload_dir: uploads
+upload_dir: ''
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
