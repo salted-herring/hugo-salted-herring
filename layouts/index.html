@@ -33,9 +33,10 @@
                                     {{ end }}
                                 {{ end }}
 
-                                {{ if .image }}
-                                    {{ .image | relURL }}
-                                    <img src=""/>
+                                {{ with .image }}
+                                    {{ . }}
+                                    {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+                                    {{ ($.Site.GetPage "section" "uploads").Resources }}
                                 {{ end }}
                                 {{ if .description }}
                                     <p>{{ .description }}</p>
