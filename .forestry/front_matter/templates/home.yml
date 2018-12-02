@@ -30,5 +30,10 @@ fields:
   label: Latest content
   name: latest_content
   description: Tiles of latest content
+- type: include
+  template: seo
+  label: SEO
+  name: meta_data
+  description: Tags for SEO
 pages:
 - content/_index.html
