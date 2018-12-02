@@ -23,7 +23,7 @@ sections:
   - work-landing-page
   - work
 upload_dir: ''
-public_path: "/uploads"
+public_path: content/uploads
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":year:/:filename:"
