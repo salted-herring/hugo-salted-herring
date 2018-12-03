@@ -1,9 +1,30 @@
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
-            <p>
+            {{ if (len .Site.Menus.footer) not gt 0 }}
+                <ul>
+                    {{ range .Site.Menus.footer }}
+                        <li>
+                            {{ if .URL }}
+                                <a itemprop="url" class="parent" href="{{.URL}}">
+                                    <span itemprop="name">{{ .Name | safeHTML }}</span></a>
+                            {{ else }}
+                                <span class="parent">{{ .Name | safeHTML }}</span>
+                            {{ end }}
 
-            </p>
+                            {{ if .HasChildren }}
+                                {{ range .Children }}
+                                    {{ if .URL }}
+                                        <a itemprop="url" class="" href="{{.URL}}">
+                                            <span itemprop="name">{{ .Name | safeHTML }}</span></a>
+                                    {{ end }}
+                                {{ end }}
+                            {{ end }}
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+
         </div>
     </div>
 </footer>
