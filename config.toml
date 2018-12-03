@@ -3,6 +3,47 @@ languageCode = "en-nz"
 theme = "saltedherring"
 title = "Salted Herring"
 verboseLog = true
+[[menu.footer]]
+name = "LinkedIn"
+parent = "follow"
+url = "https://www.linkedin.com/company/salted-herring/"
+weight = 2
+[[menu.footer]]
+name = "Facebook"
+parent = "follow"
+url = "https://www.facebook.com/saltedherring.design/"
+weight = 1
+[[menu.footer]]
+name = "follow"
+weight = 4
+[[menu.footer]]
+name = "\u2028PO Box 6535<br>\u2028Wellington 6141<br>\u2028New Zealand"
+parent = "post"
+weight = 1
+[[menu.footer]]
+name = "post"
+weight = 3
+[[menu.footer]]
+name = "15 Courtenay Place<br>Te Aro, Wellington<br>New Zealand"
+parent = "visit"
+url = "https://goo.gl/maps/dMFTMzuRMoR2"
+weight = 1
+[[menu.footer]]
+name = "visit"
+weight = 2
+[[menu.footer]]
+name = "Ph +64 4 473 1344"
+parent = "contact"
+url = "tel:+64 4 473 1344"
+weight = 2
+[[menu.footer]]
+name = "hello@satledherring.design"
+parent = "contact"
+url = "mailto:hello@satledherring.design"
+weight = 1
+[[menu.footer]]
+name = "contact"
+weight = 1
 [[menu.main]]
 name = "people"
 url = "/people"
@@ -15,7 +56,3 @@ weight = 2
 name = "about"
 url = "/about"
 weight = 1
-[[menu.footer]]
-name = "people"
-url = "/people"
-weight = 3
