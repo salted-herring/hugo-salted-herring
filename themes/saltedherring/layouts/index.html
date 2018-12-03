@@ -1,0 +1,72 @@
+{{ define "title"}}
+{{ .Site.Title }}
+|
+{{.Title}}
+{{end}}
+
+{{ define "header"}}
+{{ partial "menu" . }}
+{{end}}
+
+{{ define "main" }}
+<main aria-role="main">
+
+    <header class="homepage-header">
+        {{ .Params.introduction | safeHTML }}
+    </header>
+
+    <section class="section">
+        {{ if isset .Params "latest_content_label" }}
+        <header>
+            <h2>{{.Params.latest_content_label}}</h2>
+        </header>
+        {{ end }}
+
+        {{ if isset .Params "latest_content" }}
+        <div class="latest-content">
+            {{ range .Params.latest_content }}
+            {{ $url := string .link }}
+
+            {{ with . }}
+            {{ if .link }}
+            {{ with $.Site.GetPage .link }}
+            <a href="{{.Permalink}}">
+                {{ end }}
+                {{ end }}
+
+                {{ with .image }}
+                {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+                <img src="{{ $imageResource.RelPermalink }}" alt="{{ $imageResource.Name }}">
+                {{ end }}
+                {{ if .description }}
+                <p>{{ .description }}</p>
+                {{ end }}
+
+                {{ if .link }}
+                {{ if .link_label}}
+                <b>{{ .link_label }}</b>
+                {{ end }}
+            </a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+
+    {{ if .Params.background_text_colour_picker }}
+    <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">
+        {{ .Params.background_text }}
+    </div>
+    {{ else }}
+    <div class="background-text">
+        {{ .Params.background_text }}
+    </div>
+    {{ end }}
+
+</main>
+{{ end }}
+
+{{ define "footer" }}
+{{ partial "footer" .}}
+{{ end }}

@@ -1,6 +1,6 @@
 SectionPagesMenu = "main"
 languageCode = "en-nz"
-theme = "bulma"
+theme = "saltedherring"
 title = "Salted Herring"
 verboseLog = true
 [[menu.main]]

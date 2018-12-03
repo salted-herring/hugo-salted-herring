@@ -53,5 +53,11 @@ fields:
   label: Content Blocks
   template_types:
   - content-block
+- type: include
+  template: seo
+  label: SEO
+  name: meta_data
+  description: Tags for SEO
 pages:
 - content/work/kokako.html
+

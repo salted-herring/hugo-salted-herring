@@ -30,3 +30,9 @@ fields:
   name: clients_section
   label: Clients Section
   template: image-list
+- type: include
+  template: seo
+  label: SEO
+  name: meta_data
+  description: Tags for SEO
+
