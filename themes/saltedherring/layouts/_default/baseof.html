@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.LanguageCode }}" class="has-navbar-fixed-top">
 
     <head>
         {{ .Hugo.Generator }}
@@ -35,9 +35,7 @@
         <main>
             {{ block "main" . }}{{ end }}
         </main>
-        <footer>
-            {{ block "footer" . }}{{ end }}
-        </footer>
+        {{ block "footer" . }}{{ end }}
     </body>
 
 </html>

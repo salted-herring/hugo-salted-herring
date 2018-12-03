@@ -1,7 +1,7 @@
-<nav class="navbar is-transparent">
+<nav class="navbar is-transparent is-fixed-top">
     <div class="navbar-brand">
-        <a class="navbar-item" href="{{.Site.BaseURL | relURL}}">
-            <img class="navbar-logo" src="/img/logo.svg" alt="{{ .Site.Title }} logo" width="120">
+        <a class="navbar-item navbar-logo" href="{{.Site.BaseURL | relURL}}">
+            <img src="/img/logo.svg" alt="{{ .Site.Title }} logo" width="120">
         </a>
         <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
             <span></span>
@@ -17,7 +17,7 @@
 
         <!-- This "nav-menu" is hidden on mobile -->
         <!-- Add the modifier "is-active" to display it on mobile -->
-        <div class="navbar-end navbar--vertical">
+        <div class="navbar-end">
             <div class="navbar-item">
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}

@@ -1,5 +1,38 @@
+@charset "utf-8"
+
+/// Config
+@import 'config/bulma-variables'
+@import 'config/colours'
 @import 'config/fonts'
+@import 'imports/bulma-overrides'
+
+
+/// Initial Bulma
+@import '../node_modules/bulma/sass/utilities/initial-variables'
+@import '../node_modules/bulma/sass/utilities/functions'
+@import '../node_modules/bulma/sass/utilities/derived-variables'
+
+/// Bulma defaults
+@import 'config/colour-maps'
+@import 'imports/modifiers'
+
+/// Bulma
+@import '../node_modules/bulma/bulma'
+
+
+
 
 body
-    font-family: 'BwGradual', Helvetica, Arial, sans-serif
-    background: green
+    position: relative
+    
+    &:before
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border: 30px solid $black
+        display: block
+        content: ''
+        z-index: 100
+        pointer-events: none
