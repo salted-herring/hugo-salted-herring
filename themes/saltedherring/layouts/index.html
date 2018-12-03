@@ -9,10 +9,28 @@
 {{end}}
 
 {{ define "main" }}
-<main aria-role="main" class="has-background-light">
+<main aria-role="main">
 
-    <section class="homepage-header">
-        {{ .Params.introduction | safeHTML }}
+    <section class="homepage-header has-background-light section section--clipped">
+        <div class="container">
+            <div class="content">
+                <div class="columns">
+                    <div class="column is-half homepage-introduction">
+                        {{ .Params.introduction | safeHTML }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{ if .Params.background_text_colour_picker }}
+        <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">
+            {{ .Params.background_text }}
+        </div>
+        {{ else }}
+        <div class="background-text">
+            {{ .Params.background_text }}
+        </div>
+        {{ end }}
     </section>
 
     <section class="section">
@@ -54,16 +72,6 @@
         </div>
         {{ end }}
     </section>
-
-    {{ if .Params.background_text_colour_picker }}
-    <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">
-        {{ .Params.background_text }}
-    </div>
-    {{ else }}
-    <div class="background-text">
-        {{ .Params.background_text }}
-    </div>
-    {{ end }}
 
 </main>
 {{ end }}

@@ -90,13 +90,6 @@
   font-weight: 200;
   font-style: italic; }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1; }
-
 .navbar {
   pointer-events: none; }
   .navbar a {
@@ -7727,7 +7720,7 @@ label.panel-block {
   padding: 3rem 1.5rem; }
 
 .section {
-  padding: 3rem 1.5rem; }
+  padding: 60px; }
   @media screen and (min-width: 1088px) {
     .section.is-medium {
       padding: 9rem 1.5rem; }
