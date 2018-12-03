@@ -1,81 +1,86 @@
 {{ define "title"}}
-{{ .Site.Title }}
-|
-{{.Title}}
+    {{ .Site.Title }}
+    |
+    {{.Title}}
 {{end}}
 
 {{ define "header"}}
-{{ partial "menu" . }}
+    {{ partial "menu" . }}
 {{end}}
 
 {{ define "main" }}
-<main aria-role="main">
+    <main aria-role="main">
 
-    <section class="homepage-header has-background-light section section--clipped">
-        <div class="container">
-            <div class="content">
-                <div class="columns">
-                    <div class="column is-half homepage-introduction">
-                        {{ .Params.introduction | safeHTML }}
+        <section class="homepage-header has-background-light section">
+            <div class="container">
+                <div class="content">
+                    <div class="columns">
+                        <div class="column is-half is-offset-1 homepage-introduction">
+                            {{ .Params.introduction | safeHTML }}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        {{ if .Params.background_text_colour_picker }}
-        <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">
-            {{ .Params.background_text }}
-        </div>
-        {{ else }}
-        <div class="background-text">
-            {{ .Params.background_text }}
-        </div>
-        {{ end }}
-    </section>
-
-    <section class="section">
-        {{ if isset .Params "latest_content_label" }}
-        <header>
-            <h2>{{.Params.latest_content_label}}</h2>
-        </header>
-        {{ end }}
-
-        {{ if isset .Params "latest_content" }}
-        <div class="latest-content">
-            {{ range .Params.latest_content }}
-            {{ $url := string .link }}
-
-            {{ with . }}
-            {{ if .link }}
-            {{ with $.Site.GetPage .link }}
-            <a href="{{.Permalink}}">
-                {{ end }}
-                {{ end }}
-
-                {{ with .image }}
-                {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
-                {{ $resized := $imageResource.Resize "620x q90" }}
-                <img src="{{ $resized.RelPermalink }}" alt="{{ $resized.Name }}">
-                {{ end }}
-                {{ if .description }}
-                <p>{{ .description }}</p>
-                {{ end }}
-
-                {{ if .link }}
-                {{ if .link_label}}
-                <b>{{ .link_label }}</b>
-                {{ end }}
-            </a>
+            {{ if .Params.background_text_colour_picker }}
+                <div class="background-text" style="color: {{.Params.background_text_colour_picker}}">
+                    {{ .Params.background_text }}
+                </div>
+            {{ else }}
+                <div class="background-text">
+                    {{ .Params.background_text }}
+                </div>
             {{ end }}
-            {{ end }}
-            {{ end }}
-        </div>
-        {{ end }}
-    </section>
+        </section>
 
-</main>
+        <section class="section has-background-light">
+            <div class="container">
+                {{ if isset .Params "latest_content_label" }}
+                    <header class="section-heading">
+                        <h2 class="title">{{.Params.latest_content_label}}</h2>
+                    </header>
+                {{ end }}
+
+                {{ if isset .Params "latest_content" }}
+                    <div class="latest-content columns">
+                        {{ range .Params.latest_content }}
+                            {{ with . }}
+                                {{ if .link }}
+                                    {{ with $.Site.GetPage .link }}
+                                        <a href="{{.Permalink}}" class="column is-half content-block">
+                                        {{ end }}
+                                    {{ else }}
+                                        <div class="column is-half content-block">
+                                        {{ end }}
+
+                                        {{ with .image }}
+                                            {{ $imageResource := ($.Site.GetPage "section" "uploads").Resources.GetMatch (strings.TrimPrefix "/uploads/" . ) }}
+                                            {{ $resized := $imageResource.Resize "684x q90" }}
+                                            <img src="{{ $resized.RelPermalink }}" alt="{{ $resized.Name }}">
+                                        {{ end }}
+
+                                        {{ if .description }}
+                                            <p>{{ .description }}</p>
+                                        {{ end }}
+
+                                        {{ if .link }}
+                                            {{ if .link_label}}
+                                                <b class="link-label">{{ .link_label }}</b>
+                                            {{ end }}
+                                        </a>
+                                    {{ else }}
+                                    </div>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+
+    </main>
 {{ end }}
 
 {{ define "footer" }}
-{{ partial "footer" .}}
+    {{ partial "footer" .}}
 {{ end }}
